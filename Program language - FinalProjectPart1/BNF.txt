@@ -1,0 +1,37 @@
+<program> ::= <statement> | <statement> <program>
+
+<statement> ::= <expr> | <func-def>
+
+<func-def> ::= "@DEF@" <identifier> "(" <params> ")" "@IS@" <expr> "@END@"
+
+<params> ::= <identifier> | <identifier> "," <params> | ε
+
+<expr> ::= <term> | <expr> <op> <term> | <unary-op> <expr>
+
+<term> ::= <factor> | <term> <op> <factor>
+
+<factor> ::= <number> | <boolean> | <identifier> | <func-call> | <lambda-expr> | <if-expr> | <for-expr> | "(" <expr> ")"
+
+<func-call> ::= <identifier> "(" <args> ")"
+
+<args> ::= <expr> | <expr> "," <args> | ε
+
+<lambda-expr> ::= "@LAMBDA@" "(" <identifier> ")" "@:@" <expr>
+
+<if-expr> ::= "@IF@" <expr> "@THEN@" <expr> ("@ELSEIF@" <expr> "@THEN@" <expr>)* ["@ELSE@" <expr>] "@END@"
+
+<for-expr> ::= "@FOR@" <identifier> "@IN@" <for-range> "@DO@" <expr> "@END@"
+
+<for-range> ::= "@RANGE@" "(" <expr> "," <expr> ["," <expr>] ")"
+
+<op> ::= "@+@" | "@-@" | "@*@" | "@/@" | "@%@"  # Arithmetic
+       | "@==@" | "@!=@" | "@<@" | "@<=@" | "@>@" | "@>=@"  # Comparison
+       | "@&@" | "@|@"  # Logical
+
+<unary-op> ::= "@NOT@" | "-"
+
+<boolean> ::= "@TRUE@" | "@FALSE@"
+
+<number> ::= [0-9]+
+
+<identifier> ::= "[a-zA-Z_][a-zA-Z0-9_]*"

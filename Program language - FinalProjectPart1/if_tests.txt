@@ -1,0 +1,11 @@
+@IF@ 10 @>@ 5 @THEN@ 20 @+@ 2 @ELSE@ 10 @-@ 2 @END@
+
+@IF@ 3 @*@ 3 @==@ 9 @THEN@ 5 @/@ 1 @ELSE@ 0 @END@
+
+@IF@ @TRUE@ @THEN@ 1 @+@ 1 @ELSE@ 2 @-@ 1 @END@
+
+@IF@ 10 @>@ 20 @THEN@ 30 @ELSE@ 40 @END@
+
+@IF@ 5 @==@ 5 @THEN@ 1 @+@ 2 @ELSEIF@ 4 @>@ 3 @THEN@ 2 @+@ 3 @ELSE@ 3 @+@ 4 @END@
+
+@IF@ 10 @>@ 5 @THEN@ @IF@ 5 @>@ 3 @THEN@ 10 @+@ 5 @ELSE@ 10 @-@ 5 @END@ @ELSE@ 5 @-@ 3 @END@

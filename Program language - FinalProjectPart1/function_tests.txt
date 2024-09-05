@@ -1,0 +1,14 @@
+@DEF@ add(x, y) @IS@ x @+@ y @END@
+add(3, 7)
+
+@DEF@ square(n) @IS@ n @*@ n @END@
+square(5)
+
+@DEF@ iseven(n) @IS@ n @%@ 2 @==@ 0 @END@
+iseven(10)
+
+@DEF@ greet() @IS@ @TRUE@ @END@
+greet()
+
+@DEF@ adder(x) @IS@ (@LAMBDA@ (x) @:@ x @+@ 1)(x) @END@
+adder(5)

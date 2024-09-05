@@ -1,0 +1,14 @@
+@DEF@ factorial(n) @IS@ @IF@ n @==@ 0 @THEN@ 1 @ELSE@ n @*@ factorial(n @-@ 1) @END@ @END@ 
+factorial(5)
+
+@DEF@ fibonacci(n) @IS@ @IF@ n @==@ 0 @THEN@ 0 @ELSEIF@ n @==@ 1 @THEN@ 1 @ELSE@ fibonacci(n @-@ 1) @+@ fibonacci(n @-@ 2) @END@ @END@ 
+fibonacci(6)
+
+@DEF@ gcd(a, b) @IS@ @IF@ b @==@ 0 @THEN@ a @ELSE@ gcd(b, a @%@ b) @END@ @END@ 
+gcd(48, 18)
+
+@DEF@ power(x, y) @IS@ @IF@ y @==@ 0 @THEN@ 1 @ELSE@ x @*@ power(x, y @-@ 1) @END@ @END@ 
+power(2, 10)
+
+@DEF@ sumton(n) @IS@ @IF@ n @==@ 0 @THEN@ 0 @ELSE@ n @+@ sumton(n @-@ 1) @END@ @END@ 
+sumton(10)
